@@ -1,0 +1,186 @@
+1.9
+#include <iostream>
+int main()
+{
+    int sum = 0, val = 50;
+    while (val <= 100) {
+        sum += val;
+        ++val;
+    }
+    std::cout << "Sum of 50 to 100 inclusive is " << sum << std::endl;
+    return 0;
+}
+
+1.10
+#include<iostream>
+int main()
+{
+    int n = 10;
+    while (n >= 0) {
+        std::cout << n << std::endl;
+        --n;
+    }
+    return 0; 
+}
+
+1.11
+#include<iostream>
+int main()
+{
+    int m = 0, n = 0;
+    std::cin >> m;
+    std::cin >> n;
+    int i = m;
+    while (i <= n) {
+        std::cout << i << std::endl;
+        ++i;
+    }
+    return 0;
+}
+
+1.12
+#include <iostream>
+int main()
+{
+    int sum = 0;
+    for (int val = 50; val <= 100; ++val)
+    {
+        sum += val;
+    }
+    std::cout << "Sum of 50 to 100 inclusive is " << sum << std::endl;
+    return 0;
+}
+
+#include<iostream>
+int main()
+{
+    for (int n = 10; n >= 0; --n)
+    {
+        std::cout << n << std::endl;
+    }
+    return 0; 
+}
+
+#include<iostream>
+int main()
+{
+    int m = 0, n = 0;
+    std::cin >> m;
+    std::cin >> n;
+    for (int i = m; i <= n; ++i)
+    {
+        std::cout << i << std::endl;
+    }
+    return 0;
+}
+
+1.16
+#include <iostream>
+int main()
+{
+    int sum = 0, n = 0;
+    while (std::cin >> n){
+        sum += n;
+    }
+    std::cout << "Sum is " << sum << std::endl;
+    return 0;
+}
+
+1.17
+#include<iostream>
+
+int main()
+{
+    int currVal = 0, val = 0;
+    if (std::cin >> currVal) {
+        int cnt = 1;
+        while (std::cin >> val) {
+            if (val == currVal)
+                ++cnt;
+            else {
+                std::cout << currVal << " occurs "
+                          << cnt << " times " << std::endl;
+                currVal = val;
+                cnt = 1;
+            }
+        }
+        std::cout << currVal << " occurs "
+                  << cnt << " times " << std::endl;
+    }
+    return 0;
+}
+
+1.19
+#include <iostream>
+
+void print_fun(int m, int n){
+    for (int i = m; i >= n; --i){
+        std::cout << i << std::endl;
+    }
+}
+
+int main()
+{
+    int m, n;
+    std::cin >> m;
+    std::cin >> n;
+    if (m < n){
+        print_fun(n, m);
+    } else {
+        print_fun(m, n);
+    }
+    return 0;
+}
+
+1.20 
+// Sales_item.h 代码在https://blog.csdn.net/xuexiacm/article/details/8082689下载
+#include<iostream>
+#include "Sales_item.h"
+
+int main()
+{
+    Sales_item item1, item2, item3;
+    std::cin >> item1;
+    std::cin >> item2;
+    std::cin >> item3;
+    
+    std::cout << item1 << std::endl;
+    std::cout << item2 << std::endl;
+    std::cout << item3 << std::endl;
+    return 0;
+}
+
+1.21
+#include<iostream>
+#include "Sales_item.h"
+
+int main()
+{
+    Sales_item item1, item2;
+    std::cin >> item1;
+    std::cin >> item2;
+
+    std::cout << "The sum is " << item1 + item2 << std::endl;
+    return 0;
+}
+
+1.22
+#include<iostream>
+#include "Sales_item.h"
+
+int main()
+{
+    Sales_item item;
+    Sales_item sum;
+    int cnt = 0;
+    while (std::cin >> item) {
+        if (cnt == 0)
+            sum = item;
+        else {
+            sum += item;
+        }
+        ++cnt;
+    }
+    std::cout << "The sum is " << sum << std::endl;
+    return 0;
+}
